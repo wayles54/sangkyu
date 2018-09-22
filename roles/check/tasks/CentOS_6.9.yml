@@ -1,0 +1,8 @@
+- name: hostname Register
+  shell:
+    hostname
+  register: hostname_01
+
+- name: debug
+  debug:
+    var: hostname_01

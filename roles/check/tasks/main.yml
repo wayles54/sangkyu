@@ -1,0 +1,17 @@
+- name: OS Name & Version
+  debug:
+    msg: "{{ ansible_distribution }}_{{ ansible_distribution_version }}"
+  register: os
+
+- name: "Role Bridge: Basic 01 Check CentOS_5.11"
+  include: CentOS_5.11.yml
+  when: os.msg == 'CentOS_5.11'
+
+- name: "Role Bridge: Basic 01 Check CentOS_6.9"
+  include: CentOS_6.9.yml
+  when: os.msg == 'CentOS_6.9'
+
+- name: "Role Bridge: Basic 01 Check Fedora_11"
+  include: Fedora_11.yml
+  when: os.msg == 'Fedora_11'
+
