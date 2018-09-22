@@ -1,4 +1,4 @@
-- name: hostname Register
+- name: "{{ sangkyu }} hostname Register"
   shell:
     hostname
   register: hostname_01
