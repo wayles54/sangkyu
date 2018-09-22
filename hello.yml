@@ -1,1 +1,6 @@
-qwef
+---
+- hosts: all
+  roles:
+    - custom
+
+
